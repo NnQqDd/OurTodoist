@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:onClick="backBtnClick"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/main_color"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageButton
+        android:id="@+id/pickDateBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:onClick="pickDateTime"
+        android:src="@drawable/calendar"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/dateTxt"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameEditTxt"
+        app:tint="@color/main_color"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageButton
+        android:id="@+id/pickClockTimeBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:onClick="pickClockTime"
+        android:src="@drawable/mini_clock"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/clockTimeTxt"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameEditTxt"
+        app:tint="@color/main_color"
+        tools:ignore="UnusedAttribute" />
+
+    <EditText
+        android:id="@+id/taskNameEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Title"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backBtn" />
+
+    <EditText
+        android:id="@+id/noteEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="495dp"
+        android:layout_margin="16dp"
+        android:background="#CCFFFF"
+        android:gravity="start|top"
+        android:hint="Note"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clockTimeTxt" />
+
+    <ImageButton
+        android:id="@+id/underlineBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="9dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:onClick="makingUnderlineText"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/underline"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/uppercaseBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/main_color" />
+
+    <ImageButton
+        android:id="@+id/uppercaseBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:onClick="makingUppercase"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/uppercase"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/main_color" />
+
+    <ImageButton
+        android:id="@+id/boldBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:onClick="makingBoldText"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bold"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/italicBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/main_color"
+        tools:ignore="UnusedAttribute" />
+
+    <ImageButton
+        android:id="@+id/italicBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:onClick="makingItalicText"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/italics"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/underlineBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/main_color"
+        tools:ignore="UnusedAttribute" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:onClick="saveBtnClick"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditTxt"
+        app:layout_constraintVertical_bias="0.774" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="@color/dim_gray"
+        android:onClick="backBtnClick"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteEditTxt"
+        app:layout_constraintVertical_bias="0.774" />
+
+    <TextView
+        android:id="@+id/clockTimeTxt"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="Time"
+        android:textColor="@color/dim_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameEditTxt" />
+
+    <TextView
+        android:id="@+id/dateTxt"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="Date"
+        android:textColor="@color/dim_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/pickClockTimeBtn"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameEditTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navTasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:icon="@drawable/task"
+        android:title="Task"
+        />
+
+    <item
+        android:id="@+id/navHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:icon="@drawable/search"
+        android:title="Search"
+        />
+
+    <item
+        android:id="@+id/navSetting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:icon="@drawable/setting"
+        android:title="Setting"
+        />
+
+</menu>

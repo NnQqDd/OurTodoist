@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "235850089779",
+    "project_id": "ourtodoist",
+    "storage_bucket": "ourtodoist.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235850089779:android:35a1a2088af386f2a66a46",
+        "android_client_info": {
+          "package_name": "com.example.ourtodoist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoVYtiD1uag0Z_CDQOqQ-4vTLaUN6TMk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
